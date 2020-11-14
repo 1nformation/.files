@@ -1,4 +1,5 @@
 # .files
+## my dotfiles repo for backup purposes
 
 ![text](screenshots/2020-11-01_133653-1920x1080_scrot.png?raw=true) 
 ![text](screenshots/2020-11-01_181717-1920x1080_scrot.png?raw=true) 
