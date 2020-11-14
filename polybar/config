@@ -1,0 +1,101 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;;          ____        __      __
+;;         / __ \____  / /_  __/ /_  ____ ______
+;;        / /_/ / __ \/ / / / / __ \/ __ `/ ___/
+;;       / ____/ /_/ / / /_/ / /_/ / /_/ / /
+;;      /_/    \____/_/\__, /_.___/\__,_/_/
+;;                    /____/
+;;
+;; Created By Kival Mahadew
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; File Inclusion
+include-file = ~/.config/polybar/colors.ini
+include-file = ~/.config/polybar/modules.ini
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;; BAR
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[bar/topmain]
+
+monitor =
+monitor-fallback =
+monitor-strict = false
+override-redirect = false
+bottom = false
+fixed-center = true
+wm-restack = bspwm
+enable-ipc = true
+width = 100%
+height = 22
+offset-x = 0%
+offset-y = 0%
+
+background = ${color.bground}
+foreground = ${color.fground}
+
+radius-top = 0
+radius-bottom = 0
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = NotoSans Nerd Font:style=Regular:size=9;2
+font-1 = NotoSans Nerd Font:style=Regular:size=16;3
+
+modules-left = title s6
+modules-center = 
+
+modules-right = d5 cpu s5 d4 memory s4 d3 network s3 d2 pulseaudio s2 d1 date 
+
+[settings]
+pseudo-transparency = true
+
+[bar/bottommain]
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+monitor =
+monitor-fallback =
+monitor-strict = false
+override-redirect = false
+bottom = true
+fixed-center = true
+wm-restack = bspwm
+width = 100%
+height = 22
+offset-x = 0%
+offset-y = 0%
+
+enable-ipc = true
+
+background = ${color.trans}
+foreground = ${color.trans}
+
+font-0 = "NotoSans Nerd Font:style=Regular:size=9;2"
+font-1 = NotoSans Nerd Font:style=Regular:size=16;1
+
+radius-top = 0.0
+radius-bottom = 0.0
+
+overline-size = 0
+overline-color = ${color.accent}
+
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+tray-position = right
+tray-padding = 2
+
+modules-left = powermenu s1 di1 prev pause next si1 di2 spotify si2
+modules-center = bspwm
+modules-right = 
+
