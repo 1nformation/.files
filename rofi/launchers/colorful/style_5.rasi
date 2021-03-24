@@ -27,7 +27,7 @@ window {
     text-color:                     @fg;
 	border:							0px;
 	border-color:					@ac;
-    border-radius:                  12px;
+    border-radius:                  0px;
 	width:							40%;
     location:                       center;
     x-offset:                       0;
@@ -55,7 +55,7 @@ entry {
 
 inputbar {
 	children: 						[ prompt, entry ];
-    background-color:               @ac;
+    background-color:               @fg;
     text-color:                     @bg;
     expand:                         false;
 	border:							0% 0% 0% 0%;
@@ -68,8 +68,8 @@ inputbar {
 listview {
     background-color:               @al;
     padding:                        10px;
-    columns:                        1;
-    lines:                          6;
+    columns:                        2;
+    lines:                          10;
     spacing:                        0%;
     cycle:                          false;
     dynamic:                        true;
@@ -89,24 +89,27 @@ mainbox {
 element {
     background-color:               @al;
     text-color:                     @fg;
-    orientation:                    vertical;
+    orientation:                    horizontal;
     border-radius:                  0%;
-    padding:                        0% 0% 2% 0%;
+    padding:                        1% 0.5% 1% 0.5%;
 }
 
-
+element-icon {
+    size:                           24px;
+    border:                         0px;
+}
 
 element-text {
     expand:                         true;
-    horizontal-align:               0.5;
+    horizontal-align:               0;
     vertical-align:                 0.5;
-    margin:                         0.5% 0% -0% 0%;
+    margin:                         0% 0.25% 0% 0.25%;
 }
 
 element selected {
-    background-color:               @se;
-    text-color:                     @fg;
+    background-color:               @ac;
+    text-color:                     @bg;
 	border:							0% 0% 0% 0%;
-    border-radius:                  12px;
+    border-radius:                  0px;
     border-color:                  	@bg;
 }

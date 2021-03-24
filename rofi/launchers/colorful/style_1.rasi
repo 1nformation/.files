@@ -68,8 +68,8 @@ inputbar {
 listview {
     background-color:               @al;
     padding:                        10px;
-    columns:                        1;
-    lines:                          6;
+    columns:                        5;
+    lines:                          3;
     spacing:                        0%;
     cycle:                          false;
     dynamic:                        true;
@@ -91,16 +91,19 @@ element {
     text-color:                     @fg;
     orientation:                    vertical;
     border-radius:                  0%;
-    padding:                        0% 0% 2% 0%;
+    padding:                        2% 0% 2% 0%;
 }
 
-
+element-icon {
+    size:                           49px;
+    border:                         0px;
+}
 
 element-text {
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    margin:                         0.5% 0% -0% 0%;
+    margin:                         0.5% 0.5% -0.5% 0.5%;
 }
 
 element selected {

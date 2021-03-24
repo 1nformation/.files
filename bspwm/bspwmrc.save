@@ -1,35 +1,16 @@
-#! /bin/sh
+x#! /bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-~/.fehbg&
-bspc monitor HDMI-A-0 -d I II III IV V VI VII VIII IX X
+feh --bg-scale /home/ki/.config/space.png
+bspc monitor -d I II III IV V VI VII VIII IX X
 
 DEFAULT_NETWORK_INTERFACE=$(ip route | grep '^default' | awk '{print $5}' | head -n1)
 
-# run the xrandr command if an external monitor is connected to the
-# laptop.  This must be executed before the polybar command, so that
-# polybar can set the two separate bars properly.
-
 ~/.config/polybar/launch.sh
-killall picom
+# killall compton
 killall dunst
-killall kdeconnectd
-killall kdeconnect-indicator
-kdeconnect-indicator&
-/usr/lib/kdeconnectd&
-killall nm-applet
-
-thunar --daemon&
-
-nm-applet&
-
-xset -dpms
-xset s off
-killall xidlehook
-~/.config/lock.sh &
-
 dunst&
-picom&
+# compton&
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -47,6 +28,6 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a Lazarus state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a discord desktop='^9' follow=off
+bspc rule -a discord desktop='^10' follow=off
 
 xsetroot -cursor_name left_ptr

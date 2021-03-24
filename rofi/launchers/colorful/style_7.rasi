@@ -28,7 +28,7 @@ window {
 	border:							0px;
 	border-color:					@ac;
     border-radius:                  12px;
-	width:							40%;
+	width:							35%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -38,14 +38,14 @@ prompt {
     enabled: 						true;
 	padding: 						0.30% 1% 0% -0.5%;
 	background-color: 				@al;
-	text-color: 					@bg;
+	text-color: 					@fg;
 	font:							"FantasqueSansMono Nerd Font 12";
 }
 
 entry {
     background-color:               @al;
-    text-color:                     @bg;
-    placeholder-color:              @bg;
+    text-color:                     @fg;
+    placeholder-color:              @fg;
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search";
@@ -55,8 +55,8 @@ entry {
 
 inputbar {
 	children: 						[ prompt, entry ];
-    background-color:               @ac;
-    text-color:                     @bg;
+    background-color:               @bg;
+    text-color:                     @fg;
     expand:                         false;
 	border:							0% 0% 0% 0%;
     border-radius:                  0px;
@@ -68,9 +68,9 @@ inputbar {
 listview {
     background-color:               @al;
     padding:                        10px;
-    columns:                        1;
-    lines:                          6;
-    spacing:                        0%;
+    columns:                        2;
+    lines:                          7;
+    spacing:                        1%;
     cycle:                          false;
     dynamic:                        true;
     layout:                         vertical;
@@ -89,23 +89,26 @@ mainbox {
 element {
     background-color:               @al;
     text-color:                     @fg;
-    orientation:                    vertical;
+    orientation:                    horizontal;
     border-radius:                  0%;
-    padding:                        0% 0% 2% 0%;
+    padding:                        0.5% 0.5% 0.5% 0.5%;
 }
 
-
+element-icon {
+    size:                           24px;
+    border:                         0px;
+}
 
 element-text {
     expand:                         true;
-    horizontal-align:               0.5;
+    horizontal-align:               0;
     vertical-align:                 0.5;
-    margin:                         0.5% 0% -0% 0%;
+    margin:                         0% 0.25% 0% 0.25%;
 }
 
 element selected {
-    background-color:               @se;
-    text-color:                     @fg;
+    background-color:               @ac;
+    text-color:                     @bg;
 	border:							0% 0% 0% 0%;
     border-radius:                  12px;
     border-color:                  	@bg;

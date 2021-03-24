@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	~/.config/rofi/launchers/colorful/launcher.sh	
+	rofi -display-drun "" -font "Noto Sans 10" -combi-modi drun,window -show combi -show-icons 
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -107,6 +107,7 @@ super + ctrl + shift + space
 #
 # move/resize
 #
+
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
@@ -118,18 +119,13 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-# resize trackpad
-super + {button6, button5, button4, button7}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}	
-super + shift + {button6, button5, button4, button7}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # take Screenshots
 Print
     sleep 0.2; \
-    	scrot -z -s $HOME/'Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png' -e 'xclip -selection clipboard -target image/png -i $f'
+    scrot -s $HOME/'Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png' -e 'xclip -selection clipboard -target image/png -i $f'
 super + Print
-	scrot -z $HOME/'Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png' -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot $HOME/'Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png' -e 'xclip -selection clipboard -target image/png -i $f'
 
 # sound
 XF86AudioRaiseVolume
@@ -138,8 +134,8 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
 	sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"
 
-XF86AudioMute
-	pactl set-sink-mute 0 toggle
+#XF86AudioMute
+#	pactl set-sink-mute 0 toggle
 
 #shift + XF86AudioMute
 #	pactl set-source-mute 1 toggle
@@ -151,13 +147,7 @@ XF86AudioNext
 	playerctl next &
 
 XF86AudioPlay
-	playerctl play-pause &
-
-ctrl + n
-	playerctl next &
-
-ctrl + p
-	playerctl previous &
+	playerctl pause &
 
 # lockscreen
 alt + shift + x
@@ -170,11 +160,4 @@ XF86Calculator
 super + r
 	{polybar-msg cmd toggle; bspc config top_padding +0; bspc config bottom_padding +0 ,\
          polybar-msg cmd toggle; bspc config top_padding 20; bspc config bottom_padding 20 }
-
-#backlight
-XF86MonBrightnessUp
-	xbacklight -inc 10
-XF86MonBrightnessDown
-        xbacklight -dec 10
-
-
+eee

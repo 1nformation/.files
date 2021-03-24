@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 ~/.fehbg&
-bspc monitor HDMI-A-0 -d I II III IV V VI VII VIII IX X
+bspc monitor HDMI1 -d I II III IV V VI VII VIII IX X
 
 DEFAULT_NETWORK_INTERFACE=$(ip route | grep '^default' | awk '{print $5}' | head -n1)
 
@@ -13,18 +13,16 @@ DEFAULT_NETWORK_INTERFACE=$(ip route | grep '^default' | awk '{print $5}' | head
 ~/.config/polybar/launch.sh
 killall picom
 killall dunst
-killall kdeconnectd
+
 killall kdeconnect-indicator
 kdeconnect-indicator&
-/usr/lib/kdeconnectd&
+
 killall nm-applet
-
-thunar --daemon&
-
 nm-applet&
 
 xset -dpms
 xset s off
+
 killall xidlehook
 ~/.config/lock.sh &
 
