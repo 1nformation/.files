@@ -1,4 +1,5 @@
 [global_config]
+  inactive_color_offset = 1.0
 [keybindings]
 [profiles]
   [[default]]
@@ -7,6 +8,8 @@
     font = MesloLGS NF 10
     foreground_color = "#ffffff"
     show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#343a40:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#55b5c1:#f8f9fa:#343a40:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#55b5c1:#f8f9fa"
     use_system_font = False
     use_theme_colors = True
 [layouts]

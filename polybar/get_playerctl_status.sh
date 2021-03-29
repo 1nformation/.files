@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 STATUS=$(playerctl --player=playerctld status 2>/dev/null)
 EXIT_CODE=$?
