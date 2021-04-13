@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1613643582654388-1</unique-id>
+	<command>sh -c &apos;cd %f;terminator&apos;</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>run jar</name>
+	<submenu></submenu>
+	<unique-id>1615807323748897-1</unique-id>
+	<command>java -jar %f</command>
+	<description></description>
+	<patterns>*.jar</patterns>
+</action>
+<action>
+	<icon></icon>
+	<name>Search</name>
+	<submenu>Search</submenu>
+	<unique-id>1616326352043348-1</unique-id>
+	<command>catfish --path=%f</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Set As Wallpaper</name>
+	<submenu></submenu>
+	<unique-id>1617203055947760-1</unique-id>
+	<command>feh --bg-scale %f</command>
+	<description>Set as wallpaper</description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Scan for virus</name>
+	<submenu></submenu>
+	<unique-id>1618058591699754-1</unique-id>
+	<command>clamtk %F</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+</actions>

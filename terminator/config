@@ -3,6 +3,8 @@
 [keybindings]
 [profiles]
   [[default]]
+    background_darkness = 0.23
+    background_type = transparent
     cursor_shape = underline
     cursor_color = "#aaaaaa"
     font = MesloLGS NF 10
